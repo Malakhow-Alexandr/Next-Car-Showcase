@@ -4,4 +4,5 @@ export type ButtonProps = {
   title: string;
   containerStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
+  btnType?: "button"| "submit" | "reset"
 };

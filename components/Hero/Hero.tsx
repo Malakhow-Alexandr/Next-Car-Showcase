@@ -6,7 +6,7 @@ const Hero = () => {
   const handleScroll = () => {};
 
   return (
-    <section className="hero">
+    <section className="hero container">
       <div className="flex-1 pt-36">
         <h1 className="hero__title">
           Find, book, or rent a car - quickly and easily!
