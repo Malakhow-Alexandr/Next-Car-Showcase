@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import "./header.css"
+import "./header.css";
 import { CustomButton } from "..";
 
 const Header = () => {
@@ -14,13 +14,13 @@ const Header = () => {
             alt="Car Hub Logo"
             width={118}
             height={18}
-            className="object-contain"
+            className="object-contain hover:scale-125 transition-all duration-200"
           />
         </Link>
         <CustomButton
           btnType="button"
           title="Sing In"
-          containerStyles="header-sing-in-button"
+          containerStyles="header-sing-in-button duration-200"
         />
       </nav>
     </header>
