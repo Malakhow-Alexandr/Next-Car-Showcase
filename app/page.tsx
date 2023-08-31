@@ -1,10 +1,19 @@
 import Image from "next/image";
-import { Hero } from "@/components";
+import { Hero, CarCatalogue } from "@/components";
+import { FC } from "react";
+import { fetchCars } from "@/utils";
 
-export default function Home() {
+const Home: FC = async () => {
+  const allCars = await fetchCars();
+
+  console.log(allCars)
+
   return (
     <main className="overflow-hidden">
       <Hero />
+      <CarCatalogue />
     </main>
   );
-}
+};
+
+export default Home;

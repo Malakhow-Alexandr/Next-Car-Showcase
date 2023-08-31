@@ -3,8 +3,9 @@ import Image from "next/image";
 
 import "./header.css";
 import { CustomButton } from "..";
+import { FC } from "react";
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <header className="w-full absolute z-10 ">
       <nav className="nav">

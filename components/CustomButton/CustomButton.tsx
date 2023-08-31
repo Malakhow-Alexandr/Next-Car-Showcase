@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
 import { ButtonProps } from "@/app/types";
+import { FC } from "react";
 
-const CustomButton = ({
+export const CustomButton: FC<ButtonProps> = ({
   title,
   containerStyles,
   handleClick,
   btnType,
-}: ButtonProps) => {
+}) => {
   return (
     <button
       disabled={false}

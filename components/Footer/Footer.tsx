@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { footerLinks } from "@/constants";
+import { FC } from "react";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <footer className="footer">
       <div className=" container  mx-auto flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10">

@@ -4,5 +4,10 @@ export type ButtonProps = {
   title: string;
   containerStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
-  btnType?: "button"| "submit" | "reset"
+  btnType?: "button" | "submit" | "reset";
 };
+
+export interface SearchManufacturerProps {
+  manufacturer: string;
+  setManufacturer: (manufacturer: string) => void;
+}
