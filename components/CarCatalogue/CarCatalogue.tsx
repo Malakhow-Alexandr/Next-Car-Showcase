@@ -1,7 +1,13 @@
 import { FC } from "react";
 import { SearchBar, CustomFilter } from "..";
+import { NoResults, CarList } from "@/components";
 
-const CarCatalogue: FC = () => {
+import { fetchCars } from "@/utils/apiUtility";
+
+const CarCatalogue: FC = async () => {
+  const allCars = await fetchCars();
+  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
+
   return (
     <section
       className="mt-12 padding-x padding-y container mx-auto"
@@ -17,6 +23,11 @@ const CarCatalogue: FC = () => {
           <CustomFilter title="fuel" />
           <CustomFilter title="year" />
         </div>
+        {!isDataEmpty ? (
+          <CarList allCars={allCars} />
+        ) : (
+          <NoResults message={"Sorry Please try again"} />
+        )}
       </div>
     </section>
   );

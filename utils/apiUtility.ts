@@ -12,7 +12,7 @@ export const fetchCars = async () => {
 
   try {
     const response = await fetch(
-      "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars",
+      "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=passat",
       { headers: headers }
     );
     return await response.json();
