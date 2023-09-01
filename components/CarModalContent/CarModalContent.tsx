@@ -29,9 +29,9 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
             className="object-contain"
           />
         </li>
-        <li className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
+        <li className="flex-1 items-center justify-center relative w-full h-24 bg-primary-blue-100 rounded-lg">
           <Image
-            src={generateCarImageUrl(car)}
+            src={generateCarImageUrl(car )}
             alt="car model"
             fill
             priority

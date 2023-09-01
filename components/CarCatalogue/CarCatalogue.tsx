@@ -3,9 +3,20 @@ import { SearchBar, CustomFilter } from "..";
 import { NoResults, CarList } from "@/components";
 
 import { fetchCars } from "@/utils/apiUtility";
+import { SearchParams } from "@/app/types";
 
-const CarCatalogue: FC = async () => {
-  const allCars = await fetchCars();
+interface CarCatalogueProps {
+  searchParams: SearchParams;
+}
+
+const CarCatalogue: FC<CarCatalogueProps> = async ({ searchParams }) => {
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 10,
+    model: searchParams.model || "",
+  });
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
@@ -23,12 +34,12 @@ const CarCatalogue: FC = async () => {
           <CustomFilter title="fuel" />
           <CustomFilter title="year" />
         </div>
-        {!isDataEmpty ? (
-          <CarList allCars={allCars} />
-        ) : (
-          <NoResults message={"Sorry Please try again"} />
-        )}
       </div>
+      {!isDataEmpty ? (
+        <CarList allCars={allCars} />
+      ) : (
+        <NoResults message={"Sorry Please try again"} />
+      )}
     </section>
   );
 };

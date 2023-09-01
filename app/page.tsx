@@ -1,12 +1,17 @@
 import { FC } from "react";
 import Image from "next/image";
 import { Hero, CarCatalogue } from "@/components";
+import { SearchParams } from "./types";
 
-const Home: FC = async () => {
+interface HomeProps {
+  searchParams: SearchParams;
+}
+
+const Home: FC<HomeProps> = async ({ searchParams }) => {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <CarCatalogue />
+      <CarCatalogue searchParams={searchParams} />
     </main>
   );
 };
