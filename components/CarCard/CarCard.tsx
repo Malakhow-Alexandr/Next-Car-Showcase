@@ -5,6 +5,7 @@ import Image from "next/image";
 import { CarProps } from "@/app/types";
 import { CustomButton, CarModal } from "..";
 import { calculateCarRent } from "@/utils/calculateCarRent";
+import { generateCarImageUrl } from "@/utils/apiUtility";
 
 interface CarCardProps {
   car: CarProps;
@@ -29,7 +30,7 @@ const CarCard: FC<CarCardProps> = ({ car }) => {
       </p>
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/hero.png"
+          src={generateCarImageUrl(car)}
           alt="car model"
           fill
           priority

@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { CarProps } from "@/app/types";
 import Image from "next/image";
+import { generateCarImageUrl } from "@/utils/apiUtility";
 
 interface CarModalContentProps {
   car: CarProps;
@@ -11,7 +12,7 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
     <div className="flex-1 flex flex-col gap-3">
       <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
         <Image
-          src="/hero.png"
+          src={generateCarImageUrl(car)}
           alt="car model"
           fill
           priority
@@ -21,7 +22,7 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
       <ul className="flex gap-3">
         <li className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
           <Image
-            src="/hero.png"
+            src={generateCarImageUrl(car, "29")}
             alt="car model"
             fill
             priority
@@ -30,7 +31,7 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
         </li>
         <li className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
           <Image
-            src="/hero.png"
+            src={generateCarImageUrl(car)}
             alt="car model"
             fill
             priority
@@ -39,7 +40,7 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
         </li>
         <li className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
           <Image
-            src="/hero.png"
+            src={generateCarImageUrl(car, "13")}
             alt="car model"
             fill
             priority
