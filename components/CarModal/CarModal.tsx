@@ -1,0 +1,64 @@
+"use client";
+import "@/special.css"
+import { FC, Fragment } from "react";
+import Image from "next/image";
+import { Dialog, Transition } from "@headlessui/react";
+import { CarModalProps } from "@/app/types";
+import { CarModalContent } from "..";
+
+const CarModal: FC<CarModalProps> = ({ car, closeModal, isOpen }) => {
+  return (
+    <>
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+          </Transition.Child>
+          <div className="fixed inset-0 overflow-y-auto ">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-90"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-90"
+              >
+                <Dialog.Panel
+                 
+                  className="scroll-bar overflow-x-hidden  relative w-full max-w-lg max-h-[90vh] overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all gap-5"
+                >
+                  <button
+                    className="absolute top-2 right-2 z-10 w-fit p-2 bg-primary-blue-100 rounded-full"
+                    type="button"
+                    onClick={closeModal}
+                  >
+                    <Image
+                      src="/close.svg"
+                      alt="close modal"
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    ></Image>
+                  </button>
+                  <CarModalContent car={car} />
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+    </>
+  );
+};
+
+export default CarModal;

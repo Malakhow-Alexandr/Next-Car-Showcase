@@ -9,6 +9,8 @@ import SearchManufacturer from "./SearchManufacturer/SearchManufacturer";
 import NoResults from "./NoResults/NoResults";
 import CarList from "./CarList/CarList";
 import CarCard from "./CarCard/CarCard";
+import CarModal from "./CarModal/CarModal";
+import CarModalContent from "./CarModalContent/CarModalContent";
 
 export {
   Hero,
@@ -21,5 +23,7 @@ export {
   SearchManufacturer,
   NoResults,
   CarList,
-  CarCard
+  CarCard,
+  CarModal,
+  CarModalContent,
 };
