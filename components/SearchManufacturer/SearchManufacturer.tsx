@@ -1,4 +1,5 @@
 "use client";
+import "@/special.css"
 import { FC, useState, Fragment } from "react";
 import { Combobox, Transition } from "@headlessui/react";
 import Image from "next/image";
@@ -48,7 +49,10 @@ const SearchManufacturer: FC<SearchManufacturerProps> = ({
             leaveTo="opacity-0"
             afterLeave={() => setQuery("")}
           >
-            <Combobox.Options>
+            <Combobox.Options
+              className="scroll-bar absolute z-20 mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+              static
+            >
               {filteredManufacturer.map((item) => (
                 <Combobox.Option
                   value={item}

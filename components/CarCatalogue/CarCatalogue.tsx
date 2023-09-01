@@ -4,6 +4,7 @@ import { NoResults, CarList } from "@/components";
 
 import { fetchCars } from "@/utils/apiUtility";
 import { SearchParams } from "@/app/types";
+import { fuels, yearsOfProduction } from "@/constants";
 
 interface CarCatalogueProps {
   searchParams: SearchParams;
@@ -31,8 +32,8 @@ const CarCatalogue: FC<CarCatalogueProps> = async ({ searchParams }) => {
       <div className="home__filters">
         <SearchBar />
         <div className="home__filter-container">
-          <CustomFilter title="fuel" />
-          <CustomFilter title="year" />
+          <CustomFilter title="fuel" options={fuels} />
+          <CustomFilter title="year" options={yearsOfProduction} />
         </div>
       </div>
       {!isDataEmpty ? (

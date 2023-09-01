@@ -39,7 +39,7 @@ const SearchBar: FC = () => {
   };
   return (
     <form className="searchbar" onSubmit={handleSearch}>
-      <div className="search__item">
+      <div className="search__item relative">
         <SearchManufacturer
           manufacturer={manufacturer}
           setManufacturer={setMAnufacturer}
