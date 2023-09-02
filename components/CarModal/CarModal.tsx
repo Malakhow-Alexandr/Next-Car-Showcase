@@ -48,7 +48,7 @@ const CarModal: FC<CarModalProps> = ({ car, closeModal, isOpen }) => {
                       width={20}
                       height={20}
                       className="object-contain"
-                    ></Image>
+                    />
                   </button>
                   <CarModalContent car={car} />
                 </Dialog.Panel>

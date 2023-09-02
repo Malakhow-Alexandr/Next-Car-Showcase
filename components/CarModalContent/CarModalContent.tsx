@@ -16,6 +16,7 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
           alt="car model"
           fill
           priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-contain"
         />
       </div>
@@ -25,6 +26,7 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
             src={generateCarImageUrl(car, "29")}
             alt="car model"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
             className="object-contain"
           />
@@ -34,6 +36,7 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
             src={generateCarImageUrl(car )}
             alt="car model"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
             className="object-contain"
           />
@@ -43,6 +46,7 @@ const CarModalContent: FC<CarModalContentProps> = ({ car }) => {
             src={generateCarImageUrl(car, "13")}
             alt="car model"
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
             className="object-contain"
           />

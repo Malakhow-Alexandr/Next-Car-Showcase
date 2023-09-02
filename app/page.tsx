@@ -1,5 +1,5 @@
+
 import { FC } from "react";
-import Image from "next/image";
 import { Hero, CarCatalogue } from "@/components";
 import { SearchParams } from "./types";
 

@@ -38,7 +38,6 @@ const SearchManufacturer: FC<SearchManufacturerProps> = ({
           <Combobox.Input
             className="search-manufacturer__input"
             placeholder="Volkswagen"
-            required
             displayValue={(manufacturer: string) => manufacturer}
             onChange={(e) => setQuery(e.target.value)}
           />

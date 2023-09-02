@@ -33,6 +33,7 @@ const CarCard: FC<CarCardProps> = ({ car }) => {
           src={generateCarImageUrl(car)}
           alt="car model"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           priority
           className="object-contain"
         />
@@ -60,7 +61,7 @@ const CarCard: FC<CarCardProps> = ({ car }) => {
             <p className="text-[14px]">{drive.toUpperCase()}</p>
           </li>
           <li className="flex flex-col justify-center items-center gap-2">
-            <Image src="/gas.svg" width={20} height={20} alt="steering wheel" />
+            <Image src="/gas.svg"   width={20} height={20} alt="steering wheel" />
             <p className="text-[14px]">{city_mpg} MPG</p>
           </li>
         </ul>

@@ -60,7 +60,6 @@ const SearchBar: FC = () => {
           onChange={(e) => setModel(e.target.value)}
           placeholder="Tiguan"
           className="searchbar__input"
-          required
         />
       </div>
       <SearchButton otherClasses="" />
