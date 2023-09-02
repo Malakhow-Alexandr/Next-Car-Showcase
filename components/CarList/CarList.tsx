@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import { CarCard, ShowMoreButton } from "..";
-import { CarProps } from "@/app/types";
+import { CarProps, SearchParams } from "@/app/types";
 
 interface CarListProps {
   allCars: CarProps[];
+  searchParams: SearchParams;
 }
 
-const CarList: FC<CarListProps> = ({ allCars }) => {
+const CarList: FC<CarListProps> = ({ allCars, searchParams }) => {
   return (
     <section>
       <ul className="home__cars-wrapper">
@@ -14,7 +15,10 @@ const CarList: FC<CarListProps> = ({ allCars }) => {
           <CarCard car={car} key={index} />
         ))}
       </ul>
-      <ShowMoreButton />
+      <ShowMoreButton
+        pageNumber={searchParams.limit || 10 }
+        isNext={(searchParams.limit || 10) > allCars.length}
+      />
     </section>
   );
 };

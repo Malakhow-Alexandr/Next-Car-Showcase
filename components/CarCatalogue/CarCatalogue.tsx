@@ -31,13 +31,13 @@ const CarCatalogue: FC<CarCatalogueProps> = async ({ searchParams }) => {
       </div>
       <div className="home__filters">
         <SearchBar />
-        <div className="home__filter-container">
+        <div className="home__filter-container mx-auto sm:mx-0">
           <CustomFilter title="fuel" options={fuels} />
           <CustomFilter title="year" options={yearsOfProduction} />
         </div>
       </div>
       {!isDataEmpty ? (
-        <CarList allCars={allCars} />
+        <CarList searchParams={searchParams} allCars={allCars} />
       ) : (
         <NoResults message={"Sorry Please try again"} />
       )}
