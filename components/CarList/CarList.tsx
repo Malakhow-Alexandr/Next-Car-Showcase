@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { CarCard } from "..";
+import { CarCard, ShowMoreButton } from "..";
 import { CarProps } from "@/app/types";
 
 interface CarListProps {
@@ -14,6 +14,7 @@ const CarList: FC<CarListProps> = ({ allCars }) => {
           <CarCard car={car} key={index} />
         ))}
       </ul>
+      <ShowMoreButton />
     </section>
   );
 };

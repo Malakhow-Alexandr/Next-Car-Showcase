@@ -12,6 +12,9 @@ import CarCard from "./CarCard/CarCard";
 import CarModal from "./CarModal/CarModal";
 import CarModalContent from "./CarModalContent/CarModalContent";
 import SearchButton from "./SearchButton/SearchButton";
+import ShowMoreButton from "./ShowMoreButton/ShowMoreButton";
+
+
 
 export {
   Hero,
@@ -27,5 +30,6 @@ export {
   CarCard,
   CarModal,
   CarModalContent,
-  SearchButton
+  SearchButton,
+  ShowMoreButton,
 };
