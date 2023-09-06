@@ -2,6 +2,7 @@
 import React, { FC } from "react";
 import { CarCard, ShowMoreButton } from "..";
 import { CarProps, SearchParams } from "@/app/types";
+import { connect } from "http2";
 
 interface CarListProps {
   allCars: CarProps[];
@@ -9,7 +10,7 @@ interface CarListProps {
 }
 
 const CarList: FC<CarListProps> = ({ allCars, searchParams }) => {
-  
+   
   return (
     <section>
       <ul className="home__cars-wrapper">

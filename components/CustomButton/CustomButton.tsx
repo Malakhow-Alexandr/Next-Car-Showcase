@@ -21,7 +21,7 @@ export const CustomButton: FC<ButtonProps> = ({
     >
       <span className={`flex-1`}>{title}</span>
       {rightIcon && (
-        <div className="relative w-6 h-6">
+        <span className="relative w-6 h-6 block">
           <Image
             src={rightIcon}
             alt="right icon"
@@ -29,7 +29,7 @@ export const CustomButton: FC<ButtonProps> = ({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-contain"
           />
-        </div>
+        </span>
       )}
     </button>
   );

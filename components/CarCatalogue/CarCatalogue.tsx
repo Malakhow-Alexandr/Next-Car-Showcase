@@ -23,7 +23,7 @@ const CarCatalogue: FC<CarCatalogueProps> = async ({ searchParams }) => {
   return (
     <section
       className="mt-12 padding-x padding-y container mx-auto"
-      id="discover "
+      id="discover"
     >
       <div className="home__text-container">
         <h2 className="text-4xl font-extrabold">Car Catalogue</h2>
